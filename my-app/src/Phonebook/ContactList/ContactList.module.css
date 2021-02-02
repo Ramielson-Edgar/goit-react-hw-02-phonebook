@@ -1,0 +1,37 @@
+.list  {
+    display: flex;
+     flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+  
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    height: 90px;
+    border-radius: 5px;
+    color:black;
+    background-color: rgb(236, 235, 235);
+    margin: 4px;
+    padding: 0px 20px;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.item:hover {
+    box-shadow: 10px 12px 20px rgba(139, 139, 139, 0.3);
+    transition: 0.3s ease-in;
+}
+
+.btn {
+    width:  80px;
+    height: 30px;
+    color: white;
+    background-color: rgb(240, 106, 106);
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    
+}
