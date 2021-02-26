@@ -17,6 +17,21 @@ class App extends Component {
     filter: '',
   };
 
+  componentDidMount() {
+    const presistedContacts = localStorage.getItem('contacts');
+
+    if (presistedContacts) {
+      this.setState({ contacts: JSON.parse(presistedContacts) });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+      console.log('componentDidUpdate');
+    }
+  }
+
   addContact = ({ name, number }) => {
     const numbers = {
       id: shortid.generate(),
